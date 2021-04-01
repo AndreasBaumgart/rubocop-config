@@ -1,6 +1,14 @@
 # Defaults: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 AllCops:
   NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'config/puma.rb'
+    - 'node_modules/**/*.rb'
+    - 'node_modules/**/*.spec'
+    - 'Rakefile'
+    - 'config.ru'
+    - 'vendor/**/*'
 
 Lint/RaiseException:
   Enabled: true
@@ -104,6 +112,13 @@ Style/GuardClause:
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
 
 # New Cops
 Gemspec/DateAssignment: # (new in 1.10)
