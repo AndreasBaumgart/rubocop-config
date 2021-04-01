@@ -26,7 +26,7 @@ Add these lines to your `.rubocop.yml`:
 # /.rubocop.yml
 inherit_gem:
   rubocop-config:
-  - rubocop.yml
+  - config/rubocop.yml
   
 # Some files define `Exclude` for same cops. To merge the `Exclude` rules, add:
 inherit_mode:
@@ -48,7 +48,7 @@ Add these lines to your `.rubocop.yml`
 ```yml
 # /.rubocop.yml
 inherit_from:
-  - https://raw.githubusercontent.com/AndreasBaumgart/rubocop-config/master/rubocop.yml
+  - https://raw.githubusercontent.com/AndreasBaumgart/rubocop-config/master/config/rubocop.yml
 ```
 
 Add these lines to your `.gitignore` if you wish not to commit the cached copies of these files
